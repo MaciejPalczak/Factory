@@ -29,8 +29,6 @@ class Main {
             int age = scanner.nextInt();
             System.out.println("Enter salary: ");
             int salary = scanner.nextInt();
-            //tutaj ten try catch jest niepotrzebny bo nie ma powodu zeby jakikolwiek wyjatek polecial
-            //ale gdyby dodawanie workera bylo operacja gdzie cos moze sie zjebac, to tak sie najprosciej obsluguje takie sytuacje
             try {
                 workers.add(new Worker.Builder().withName(name).withAge(age).withSalary(salary).build());
                 log.info("Successfully added new worker!");
