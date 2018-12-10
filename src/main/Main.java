@@ -32,7 +32,7 @@ class Main {
             try {
                 workers.add(new Worker.Builder().withName(name).withAge(age).withSalary(salary).build());
                 log.info("Successfully added new worker!");
-            }catch(Exception ex){
+            }catch(IllegalArgumentException ex){
                 log.error("Exception while adding new worker: ", ex);
             }
             workersCreated++;
